@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <AK_Deliverytime>
+      <version>0.1.0</version>
+    </AK_Deliverytime>
+  </modules>
+  <global>
+    <helpers>
+      <deliverytime>
+        <class>AK_Deliverytime_Helper</class>
+      </deliverytime>
+    </helpers>
+	<blocks>
+	  
+	  <checkout>
+				<rewrite>
+					<onepage>AK_Deliverytime_Block_Onepage</onepage>
+				</rewrite>
+	  </checkout>
+	  
+	  <deliverytime>
+		<class>AK_Deliverytime_Block</class>
+	  </deliverytime>
+	  
+	  <checkoutsteponepage>
+				<class>AK_Deliverytime_Block_Onepage</class>
+	  </checkoutsteponepage>
+	  
+	</blocks>
+	<models>
+	  <deliverytime>
+		<class>AK_Deliverytime_Model</class>
+		<resourceModel>deliverytime_mysql4</resourceModel>
+	  </deliverytime>
+	  <deliverytime_mysql4>
+		<class>AK_Deliverytime_Model_Mysql4</class>
+		<entities>		  
+			  <deliverytime>
+				<table>deliverytime</table>
+			  </deliverytime>
+			  <timeslot>
+				<table>timeslot</table>
+			  </timeslot>
+        </entities>
+	  </deliverytime_mysql4>
+	  
+	  <checkout>
+				<rewrite>
+					<type_onepage>AK_Deliverytime_Model_Type_Onepage</type_onepage>
+				</rewrite>
+	  </checkout>
+	  
+	</models>
+	
+	<rewrite>
+			<ak_deliverytime_onepage>
+				<from><![CDATA[#^/checkout/onepage/#]]></from>
+				<to>/deliverytime/onepage/</to>
+			</ak_deliverytime_onepage>
+	</rewrite>
+	
+	<resources>
+	
+	  <deliverytime_setup>
+		<setup>
+		  <module>AK_Deliverytime</module>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </deliverytime_setup>
+	  <deliverytime_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </deliverytime_write>
+	  <deliverytime_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </deliverytime_read>
+	  
+	</resources>
+  </global>
+  
+  <frontend>
+		<routers>
+			<ak_deliverytime>
+				<use>standard</use>
+				<args>
+					<module>AK_Deliverytime</module>
+					<frontName>deliverytime</frontName>
+				</args>
+			</ak_deliverytime>
+
+		</routers>
+
+		<events>
+			<checkout_onepage_controller_success_action>
+				<observers>
+					<hooksystem_order_success>
+						<type>singleton</type>
+						<class>deliverytime/observer</class>
+						<method>hookToOrderSaveEvent</method>
+					</hooksystem_order_success>
+				</observers>
+			</checkout_onepage_controller_success_action>
+		</events>
+
+		<layout>
+			<updates>
+				<deliverytime>
+					<file>deliverytime.xml</file>
+				</deliverytime>
+			</updates>
+		</layout>
+	</frontend>
+  
+  <admin>
+	<routers>
+	  <deliverytime>
+	    <use>admin</use>
+		<args>
+		  <module>AK_Deliverytime</module>
+		  <frontName>admin_deliverytime</frontName>
+		</args>
+	  </deliverytime>
+	</routers>
+  </admin>
+  
+  <adminhtml>
+	<menu>
+	  <deliverytime module="deliverytime">
+		<title>Deliverytime</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <deliverytime module="deliverytime">
+		    <title>Manage Deliverytime</title>
+			<sort_order>0</sort_order>
+			<action>admin_deliverytime/adminhtml_deliverytime</action>
+		  </deliverytime>
+		</children>
+	  </deliverytime>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<deliverytime translate="title" module="deliverytime">
+			  <title>Deliverytime</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+				  <deliverytime translate="title">
+					<title>Manage Deliverytime</title>
+					<sort_order>0</sort_order>
+				  </deliverytime>
+			  </children>
+			</deliverytime>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<deliverytime>
+		  <file>deliverytime.xml</file>
+		</deliverytime>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 

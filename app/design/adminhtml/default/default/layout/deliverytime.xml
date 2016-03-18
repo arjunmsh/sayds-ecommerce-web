@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <deliverytime_adminhtml_deliverytime_index>
+	<reference name="content">
+	  <block type="deliverytime/adminhtml_deliverytime" name="deliverytime" />
+	</reference>
+  </deliverytime_adminhtml_deliverytime_index>
+  
+  <adminhtml_sales_order_view>
+        <reference name="order_tab_info">
+            <action method="setTemplate" ifconfig="deliverytime/deliverytime_general/enabled">
+                <template>deliverytime/info.phtml</template>
+            </action>
+        </reference>
+    </adminhtml_sales_order_view>
+  
+  
+   <deliverytime_adminhtml_deliverytime_new>
+        <reference name="head">
+            
+			<action method="addItem">
+                <type>js</type>
+                <name>timepicker/jquery.min.js</name>
+            </action>
+            
+			<action method="addItem">
+                <type>js</type>
+                <name>timepicker/kendo.all.min.js</name>
+            </action>
+			
+			<action method="addItem">
+                <type>js</type>
+                <name>timepicker/init.js</name>
+            </action>
+			<!-- CSS -->
+			<action method="addItem">
+                <type>js_css</type>
+                <name>timepicker/kendo.common.min.css</name>
+            </action>
+			
+			<action method="addItem">
+                <type>js_css</type>
+                <name>timepicker/kendo.default.min.css</name>
+            </action>
+			
+			<action method="addItem">
+                <type>js_css</type>
+                <name>timepicker/kendo.dataviz.min.css</name>
+            </action>
+			
+			<action method="addItem">
+                <type>js_css</type>
+                <name>timepicker/kendo.dataviz.default.min.css</name>
+            </action>
+			
+        </reference>
+    </deliverytime_adminhtml_deliverytime_new>
+	
+   <deliverytime_adminhtml_deliverytime_edit>
+        <reference name="head">
+            
+			<action method="addItem">
+                <type>js</type>
+                <name>jquery/jquery.min.js</name>
+            </action>
+            
+			<action method="addItem">
+                <type>js</type>
+                <name>timepicker/kendo.all.min.js</name>
+            </action>
+			
+			<action method="addItem">
+                <type>js</type>
+                <name>timepicker/init.js</name>
+            </action>
+			<!-- CSS -->
+			<action method="addItem">
+                <type>js_css</type>
+                <name>timepicker/kendo.common.min.css</name>
+            </action>
+			
+			<action method="addItem">
+                <type>js_css</type>
+                <name>timepicker/kendo.default.min.css</name>
+            </action>
+			
+			<action method="addItem">
+                <type>js_css</type>
+                <name>timepicker/kendo.dataviz.min.css</name>
+            </action>
+			
+			<action method="addItem">
+                <type>js_css</type>
+                <name>timepicker/kendo.dataviz.default.min.css</name>
+            </action>
+			
+        </reference>
+    </deliverytime_adminhtml_deliverytime_edit>
+  
+</layout>

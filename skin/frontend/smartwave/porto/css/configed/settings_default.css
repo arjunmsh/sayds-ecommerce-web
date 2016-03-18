@@ -1,0 +1,29 @@
+/**
+ * WARNING: Do not change this file. Your changes will be lost.
+ * 2016-02-20 09:13:15 */
+
+.header-container.type4 { border-top: 0; }
+.header-container.type4 .main-nav ul.menu>li>a { padding-top: 19px; padding-bottom: 19px; height: 54px; }
+.main-nav .menu { border-bottom: 4px solid #3f4048; height: 54px; }
+.main-nav ul.menu >li.menu-full-width >a:after, .main-nav ul.menu >li.menu-item-has-children >a:after, .main-nav ul.menu >li.menu-static-width >a:after { margin-top: -9px; }
+.footer-middle .block.block-subscribe .input-box input.input-text {border: 0;background-color: #45464e;border-radius: 0;height: 36px;color:#fff;}
+.footer-middle .block.block-subscribe .input-box button {border-left: 0;}
+.footer-middle .block.block-subscribe .input-box button span {background-color: #0f0f0f;color: #fff;height: 36px;line-height: 36px;border-radius: 0;text-transform: uppercase;}
+.footer-bottom a.logo{margin-right:0}
+.footer-middle .product-name a,.small-list .price{color:#fff;}
+.top-container >.breadcrumbs {margin-top: 5px; margin-bottom: -15px;}
+.fixed-header ul.menu >li .nav-sublist-dropdown, .main-nav ul.menu >li .nav-sublist-dropdown, .fixed-header ul.menu >li.menu-full-width .nav-sublist-dropdown, .main-nav ul.menu >li.menu-full-width .nav-sublist-dropdown, .fixed-header ul.menu >li.menu-static-width .nav-sublist-dropdown, .main-nav ul.menu >li.menu-static-width .nav-sublist-dropdown{margin-top:0}
+.header-container.type4 .main-nav ul.menu>li.menu-static-width.act:hover>a, .header-container.type4 .main-nav ul.menu>li.menu-full-width.act:hover>a, .header-container.type4 .main-nav ul.menu>li.menu-item-has-children.act:hover>a{height:54px;}
+.header-container.type4 .main-nav ul.menu>li.menu-static-width.act>a, .header-container.type4 .main-nav ul.menu>li.menu-full-width.act>a, .header-container.type4 .main-nav ul.menu>li.menu-item-has-children.act>a{height:50px;}
+.main-nav ul.menu >li.menu-full-width.act >a:after, .main-nav ul.menu >li.menu-item-has-children.act >a:after, .main-nav ul.menu >li.menu-static-width.act >a:after {
+margin-top: -7px;
+}
+.main-nav ul.menu >li.menu-full-width.act:hover >a:after, .main-nav ul.menu >li.menu-item-has-children.act:hover >a:after, .main-nav ul.menu >li.menu-static-width.act:hover >a:after {
+margin-top: -9px;
+}
+@media (max-width:991px){
+.header-container.sticky-header.type4{background-color:#fff}
+}
+@media (min-width:768px){
+    .footer-middle .col-sm-3{width:22.22%}
+}

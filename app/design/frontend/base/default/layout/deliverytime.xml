@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+
+<checkout_onepage_index>
+	<reference name="head">
+	    <action method="addCss"><stylesheet>deliverytime/checkout.css</stylesheet></action>
+		<action method="addItem"><type>skin_js</type><name>deliverytime/jquery.min.js</name></action>
+		<action method="addItem"><type>skin_js</type><name>deliverytime/timeslot.js</name></action>
+	</reference>
+	<reference name="checkout.onepage">
+		<!-- Extra step added to OnePage Checkout -->
+		<block type="deliverytime/onepage_deliverytime" name="checkout.onepage.deliverytime" as="deliverytime" after="checkout.onepage.billing" template="checkout/onepage/deliverytime.phtml"/>		
+	</reference>
+</checkout_onepage_index>
+</layout>

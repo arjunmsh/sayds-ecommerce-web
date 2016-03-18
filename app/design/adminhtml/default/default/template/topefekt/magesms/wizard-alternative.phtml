@@ -1,0 +1,18 @@
+<?php
+/**
+ * Mage SMS - SMS notification & SMS marketing
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the BSD 3-Clause License
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @category    TOPefekt
+ * @package     TOPefekt_Magesms
+ * @copyright   Copyright (c) 2012-2015 TOPefekt s.r.o. (http://www.mage-sms.com)
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ */
+?><h2><?php echo Mage::helper('magesms')->__('SMS Settings - Select Text sender ID for '); ?><?php echo $this->route->getAreaText(); ?></h2><div id="magesms"><div class="entry-edit"><div class="entry-edit-head"><h4 class="icon-head fieldset-legend head-account"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'magesms/AdminTools.gif'; ?>" alt="" /><?php echo Mage::helper('magesms')->__('Text sender ID settings'); ?></h4></div><div class="fieldset grid"><form id="magesms_sender" action="<?php echo $this->getUrl('*/*/savesenderalternative'); ?>" method="post"><input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" /><input name="id" type="hidden" value="<?php echo $this->getRequest()->getParam('id'); ?>" /><?php $maxlength = 11; $desc = Mage::helper('magesms')->__('max. 11 characters'); ?><table class="data" style="width: auto;"><col /><col width="200"><tr class="headings"><th><?php echo Mage::helper('magesms')->__('Store'); ?></th><th><?php echo Mage::helper('magesms')->__('Text sender ID'); ?></th></tr><?php foreach($this->stores as $store): ?><tr><td><?php echo $store->getName(); ?></td><td><input type="text" class="validate-sender input-text" id="store_group_<?php echo $store->getId(); ?>" title="<?php echo $desc;?>" maxlength="<?php echo $maxlength;?>" name="store_group[<?php echo $store->getId(); ?>]" value="<?php echo $store->getTextsenderAlternative() ? $store->getTextsenderAlternative() : $store->getTextsender(); ?>" /></td></tr><?php endforeach; ?></table><div class="margin-form"><input type="button" onclick="senderForm.submit();" value="<?php echo Mage::helper('magesms')->__('Save'); ?>" class="form-button" /></div></form><script type="text/javascript">//<![CDATA[
+var senderForm = new varienForm('magesms_sender', '<?php echo Mage::helper("adminhtml")->getUrl('*/*/validatesenderalternative'); ?>');Validation.add('validate-sender','possible characters: ', function(v) {return Validation.get('IsEmpty').test(v) || v.length >= 3 && /^[0-9a-zA-Z_.]+$/.test(v) && !/^[0-9]+$/.test(v);});Translator.add('possible characters: ','<?php echo Mage::helper('magesms')->__('possible characters: ').'a-z A-Z 0-9 _ .'; ?>');
+//]]></script></div></div></div>

@@ -1,0 +1,49 @@
+[14-Feb-2016 02:15:10 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 335688 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[16-Feb-2016 00:43:46 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 360001 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 290
+[16-Feb-2016 08:18:16 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 565709 bytes) in /home/saydsindia/public_html/app/code/core/Mage/Core/Model/Url.php on line 1148
+[16-Feb-2016 09:39:52 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 2250000 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[16-Feb-2016 10:03:55 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'File '/home/saydsindia/public_html/media/wysiwyg/smartwave/blog/' does not exists.' in /home/saydsindia/public_html/lib/Varien/File/Transfer/Adapter/Http.php:96
+Stack trace:
+#0 /home/saydsindia/public_html/get.php(205): Varien_File_Transfer_Adapter_Http->send('/home/saydsindi...')
+#1 /home/saydsindia/public_html/get.php(165): sendFile('/home/saydsindi...')
+#2 {main}
+  thrown in /home/saydsindia/public_html/lib/Varien/File/Transfer/Adapter/Http.php on line 96
+[19-Feb-2016 15:14:00 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 640224 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[20-Feb-2016 11:35:24 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 291825 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 290
+[20-Feb-2016 23:54:30 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 65552 bytes) in /home/saydsindia/public_html/lib/Zend/Locale/Data.php on line 1615
+[22-Feb-2016 13:22:07 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 1014001 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 290
+[23-Feb-2016 10:11:32 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 2084400 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[24-Feb-2016 10:27:24 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 12512 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[24-Feb-2016 10:32:04 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 12512 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[24-Feb-2016 10:32:14 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 12512 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[24-Feb-2016 11:01:59 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 3128 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[24-Feb-2016 11:02:03 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 12512 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[24-Feb-2016 11:04:31 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 3128 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[24-Feb-2016 11:04:35 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 12512 bytes) in /home/saydsindia/public_html/lib/Varien/Image/Adapter/Gd2.php on line 74
+[25-Feb-2016 12:59:29 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3275 bytes) in /home/saydsindia/public_html/app/code/core/Zend/Db/Statement.php on line 194
+[25-Feb-2016 12:59:37 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2 bytes) in /home/saydsindia/public_html/lib/Zend/Db/Statement/Pdo.php on line 291
+[25-Feb-2016 13:00:22 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2 bytes) in /home/saydsindia/public_html/lib/Zend/Db/Statement/Pdo.php on line 291
+[25-Feb-2016 13:00:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 72 bytes) in /home/saydsindia/public_html/app/code/core/Zend/Db/Select.php on line 979
+[25-Feb-2016 13:14:17 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/saydsindia/public_html/app/code/core/Zend/Db/Select.php on line 757
+[25-Feb-2016 13:15:28 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 72 bytes) in /home/saydsindia/public_html/app/code/core/Zend/Db/Select.php on line 738
+[29-Feb-2016 04:18:17 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[29-Feb-2016 04:29:56 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[29-Feb-2016 04:32:48 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[29-Feb-2016 04:33:04 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[29-Feb-2016 04:33:36 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[29-Feb-2016 04:45:39 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[29-Feb-2016 04:46:28 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[01-Mar-2016 01:22:25 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[01-Mar-2016 01:22:26 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[01-Mar-2016 04:29:10 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[01-Mar-2016 04:29:20 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[01-Mar-2016 06:28:45 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[01-Mar-2016 06:28:47 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[02-Mar-2016 02:32:43 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[02-Mar-2016 02:32:44 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[03-Mar-2016 01:27:38 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[03-Mar-2016 01:27:39 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[03-Mar-2016 02:25:42 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[03-Mar-2016 02:25:44 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[03-Mar-2016 02:31:44 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[03-Mar-2016 02:31:45 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0

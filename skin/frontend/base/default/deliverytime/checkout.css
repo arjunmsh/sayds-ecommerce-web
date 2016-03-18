@@ -1,0 +1,235 @@
+/*------------------------
+	Time Slot Table
+-------------------------*/
+.timeSlotTable {
+	width:100%;
+	float: left;
+	margin:10px 2%;
+}
+.timeSlotTable .header {
+	width:638px;
+	height:34px;
+	font-weight:bold;
+	color:#000;
+}
+.timeSlotTable .header .col1, .col2, .col3 {
+/*		float:left;*/	
+}
+.timeSlotTable .header .col1 {
+	padding:8px 0px 8px 0px;
+	background:#cbcbcb;
+	text-align:center;
+	border-left:1px solid #e3e3e3;
+	border-right:1px solid #e3e3e3;
+}
+.timeSlotTable .header .col2 {
+	width:395px;
+	text-align:center;
+	padding:4px 0px 5px 5px;
+	display:block;
+	background:#ebebe9;
+}
+.timeSlotTable .header .col3 {
+	width:119px;
+	text-align:right;
+	padding:4px 5px 3px 0px;
+	display:block;
+	background:#ebebea;
+	border-right:1px solid #e3e3e3;
+}
+/*----------------------------
+	ROW /COLUMN 
+-----------------------------*/
+.timeSlotTable .oddRow, .evenRow {
+	width:100%;
+	/*height:40px;	*/
+	font-weight:normal;
+	clear:both;
+}
+.timeSlotTable .evenRow {
+	background:#f8f8f8;
+}
+.timeSlotTable .oddRow .col1 {
+	width:90%;
+	padding:9px 5px;
+	background:#f5f5f5;
+	border-left:1px solid #e3e3e3;
+	border-right:1px solid #e3e3e3;
+	color:#000;
+	float:left;
+}
+.timeSlotTable .oddRow .col2345 {
+	width:93px;
+	padding:10px 5px;
+	background:#ffffff;
+	border-right:1px solid #e3e3e3;
+	color:#333;
+	float:left;
+}
+.timeSlotTable .oddRow .expressDel {
+	width:93px;
+	padding:10px 5px;
+	background:#ff8a00;
+	border-right:1px solid #ff8a00;
+	color:#000;
+	float:left;
+}
+.timeSlotTable .oddRow .unavilable {
+	width:93px;
+	padding:10px 5px;
+	background:#4a4a4a;
+	border-right:1px solid #4a4a4a;
+	color:#999;
+	float:left;
+}
+.timeSlotTable .evenRow .col1 {
+	width:100px;
+	padding:9px 10px;
+	background:#e6e6e6;
+	border-left:1px solid #e3e3e3;
+	border-right:1px solid #e3e3e3;
+	color:#000;
+	float:left;
+}
+.timeSlotTable .evenRow .col2345 {
+	width:93px;
+	padding:10px 5px;
+	background:#f8f8f8;
+	border-right:1px solid #e3e3e3;
+	color:#333;
+	float:left;
+}
+.timeSlotTable .evenRow .expressDel {
+	width:93px;
+	padding:10px 5px;
+	background:#ff8a00;
+	border-right:1px solid #ff8a00;
+	color:#000;
+	float:left;
+}
+.timeSlotTable .evenRow .unavilable {
+	width:93px;
+	padding:10px 5px;
+	background:#4a4a4a;
+	border-right:1px solid #4a4a4a;
+	color:#999;
+	float:left;
+}
+/*------------------------------*/
+
+.express {
+	background-color: #ff8a00;
+	background:#ff8a00;
+	color:#FFF;
+	background:url(../images/fire.jpg);
+	padding-top:15px;
+}
+.timeSlotTable input[type=radio] {
+	padding:0;
+	margin:0;
+}
+.timeSlotTable Label {
+	padding:0 0 0 5%;
+	margin:0;
+	white-space:nowrap;
+}
+.borderBottom {
+	border-bottom:1px solid #e3e3e3;
+}
+.timeSlotTable {
+}
+.slotUnavilable {
+	background-color:#09F;
+}
+.arrow_con_st_3 {
+	width:22px;
+	height:10px;
+	margin-left:310px;
+	z-index:60;
+	top:10px;
+	left:-12px;
+	float: left;
+}
+.arrow_box {
+	position: relative;
+	background: #ebebeb;
+	border: 1px solid #dfdfdf;
+	padding:10px;
+	text-align:center;
+	color:#6c9604;
+}
+
+.legend {
+	margin: 5px 0 0 1%;
+	background:#ebebeb;
+	border:1px solid #dfdfdf;
+	padding:0 2%;
+	float: left;
+	width: 93%;
+}
+.legend ul {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+	list-style-position:outside;
+	text-align: left;
+}
+.legend ul li {
+	background-repeat: no-repeat;
+	background-position: 0 3px;
+	padding-left:20px;
+	margin:10px 0;
+	color:#333;
+	line-height:20px;
+	font-weight:normal;
+}
+.legend span {
+	color:#ff8a00;
+}
+p.note {
+	color:#333;
+	font-style:italic;
+	line-height:18px;
+}
+.nextweek {
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-weight:bold;
+	padding:6px 10px;
+	text-decoration:none;
+}
+.nextweek:hover {
+	background-color:#dfdfdf;
+}
+.nextweek:active {
+	position:relative;
+	top:1px;
+}
+.nocolor {
+	background-color:#ffffff;
+	text-align:center;
+	font-weight:bold;
+	font-size:10px;
+}
+.nohover {
+	/*background-color:#737373;	*/
+  background-color:#ddd;
+/*	width: 22%;*/
+}
+.black {
+	background-color:#343434;
+	background:#343434;
+}
+
+.tslot_header {
+	background:none repeat scroll 0 0 #EBEBE9;
+	vertical-align:middle;
+}
+.delivery_modes_nextweek{
+    display:none;
+}

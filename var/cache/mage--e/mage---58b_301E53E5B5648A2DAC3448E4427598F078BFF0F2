@@ -1,0 +1,11 @@
+<div class="block">
+    <div class="block-title"><strong><span>SHOP</span></strong></div>
+    <div class="block-content">
+        <ul class="links">
+            <li><i class="icon-angle-right theme-color"></i><a href="#">Branded Food</a></li>
+            <li><i class="icon-angle-right theme-color"></i><a href="#">Ayurvedic</a></li>
+            <li><i class="icon-angle-right theme-color"></i><a href="#">Milk Product</a></li>
+            <li><i class="icon-angle-right theme-color"></i><a href="brand.html">Shop by Brand</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<tabs>
+		<magesms_tab translate="label" module="magesms">
+			<label>Mage SMS</label>
+			<sort_order>500</sort_order>
+		</magesms_tab>
+	</tabs>
+	<sections>
+		<magesms translate="label" module="magesms">
+			<label>Configuration</label>
+			<tab>magesms_tab</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>101</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<magesms translate="label" module="magesms">
+					<label>Mage SMS module</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>101</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enable translate="label,comment" module="magesms">
+							<label>Enable Mage SMS</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>150</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enable>
+						<customer_groups_enable translate="label,comment" module="magesms">
+							<label>Enable SMS sending for certain customer groups only</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>151</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</customer_groups_enable>
+						<customer_groups translate="label,comment" module="magesms">
+							<label>Customer Groups</label>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>magesms/system_config_customergroups</source_model>
+							<depends>
+								<customer_groups_enable>1</customer_groups_enable>
+							</depends>
+							<sort_order>152</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</customer_groups>
+					</fields>
+				</magesms>
+				<template translate="label" module="magesms">
+					<label>SMS Templates Language</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>102</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<language translate="label,comment" module="magesms">
+							<label>Language</label>
+							<comment>Select language used in the SMS templates in Admin SMS and Customer SMS tabs.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>magesms/system_config_lang</source_model>
+							<sort_order>150</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</language>
+					</fields>
+				</template>
+				<api translate="label" module="magesms">
+					<label>API</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>103</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<active translate="label,comment" module="magesms">
+							<label>Enabled</label>
+							<comment>http://domain/magesms/api or http://domain/en/magesms/api</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						<apikey translate="label,comment" module="magesms">
+							<label>API Key</label>
+							<comment>API secured key</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>magesms/system_config_apikeygenerator</frontend_model>
+							<depends>
+								<active>1</active>
+							</depends>
+							<validate>required-entry</validate>
+							<sort_order>150</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</apikey>
+					</fields>
+				</api>
+			</groups>
+		</magesms>
+	</sections>
+</config>

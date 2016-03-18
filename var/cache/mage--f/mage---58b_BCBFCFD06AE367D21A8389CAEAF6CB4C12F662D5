@@ -1,0 +1,13 @@
+<div class="block">
+    <div class="block-title"><strong><span>ABOUT SaydsIndia</span></strong></div>
+    <div class="block-content">
+        <p>one of the India’s largest online food and grocery store. With over 5,000 products and over a 250 brands in our catalogue you will find everything you are looking for. Right from fresh Rice and Dals, Spices and Seasonings to Packaged products, Beverages, Personal care products – we have it all.</p>
+        
+    </div>
+    <ul class="contact-info" style="margin-top: 30px;">
+        <li><i class="icon-phone">&nbsp;</i><p><b>Need Help? Call us</b><br>7077 744 049 </p></li>
+    </ul>
+<div style="margin: 20px 0 0 20px;"><div class="social-icons">
+<a href="http://facebook.com/saydsINDIA" style="background-position:-60px 0; width:30px; height:30px;" class="icon1-class" title="Facebook" target="_blank">&nbsp;</a><a href="http://twitter.com/saydsINDIA" style="background-position:0 0; width:30px; height:30px;" class="icon2-class" title="Twitter" target="_blank">&nbsp;</a><a href="http://www.instagram.com/saydsINDIA" style="background-position:-150px -90px; width:30px; height:30px;" class="icon3-class" title="Instagram" target="_blank">&nbsp;</a></div>
+</div>
+</div>

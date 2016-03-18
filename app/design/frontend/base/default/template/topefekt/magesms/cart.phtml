@@ -1,0 +1,16 @@
+<?php
+/**
+ * Mage SMS - SMS notification & SMS marketing
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the BSD 3-Clause License
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @category    TOPefekt
+ * @package     TOPefekt_Magesms
+ * @copyright   Copyright (c) 2012-2015 TOPefekt s.r.o. (http://www.mage-sms.com)
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ */
+?><?php if ($this->getOptoutProduct()): ?><form method="post" action="<?php echo $this->getOptoutUrl(); ?>"><div class="discount"><p class="checkbox smsoptout"><input type="checkbox" onchange="this.form.submit()" id="smsoptout" name="smsoptout" <?php echo $this->getOptoutAuto() ? 'checked' : ''; ?>> <label for="smsoptout"><strong><?php echo $this->getOptoutProduct()->getName(); ?></strong> - <?php echo Mage::helper('core')->currency($this->getOptoutProduct()->getPrice(), true, false); ?></label></p></div></form><?php endif; ?>

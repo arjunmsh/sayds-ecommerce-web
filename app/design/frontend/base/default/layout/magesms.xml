@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<checkout_cart_index translate="label">
+		<reference name="checkout.cart.methods">
+			<block type="magesms/cart" name="magesms.cart" template="topefekt/magesms/cart.phtml" before="-" />
+		</reference>
+	</checkout_cart_index>
+	<!-- 
+	<customer_account>
+		<reference name="customer_account_navigation">
+			<action method="addLink" translate="label" module="magesms">
+				<name>magesms</name>
+				<path>magesms/marketing/</path>
+				<label>SMS Marketing</label>
+			</action>
+		</reference>
+	</customer_account>
+	 -->
+	<customer_account_index translate="label">
+		<reference name="my.account.wrapper">
+			<block type="magesms/customer_marketing" name="customer_account_dashboard_magesms" template="topefekt/magesms/marketing-dashboard.phtml" />
+		</reference>
+	</customer_account_index>
+</layout>

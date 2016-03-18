@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Topefekt_Magesms>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Topefekt_Magesms>
+    </modules>
+</config>

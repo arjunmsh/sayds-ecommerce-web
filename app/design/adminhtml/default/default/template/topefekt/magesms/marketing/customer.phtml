@@ -1,0 +1,16 @@
+<?php
+/**
+ * Mage SMS - SMS notification & SMS marketing
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the BSD 3-Clause License
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @category    TOPefekt
+ * @package     TOPefekt_Magesms
+ * @copyright   Copyright (c) 2012-2015 TOPefekt s.r.o. (http://www.mage-sms.com)
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ */
+?><div class="entry-edit"><div class="entry-edit-head"><h4><?php echo $this->getTitle();?> <?php echo $this->getCollection()->count(); ?></h4></div><fieldset class="magesms-marketing-customer"><?php if ($this->getCollection()->count()): ?><?php if (!$this->getDeleteCustomer() && !Mage::app()->isSingleStoreMode()): ?><div id="magesms-stores"><?php foreach ($this->getWebsites()->getWebsites() as $website): ?><span class="badge" style="background:<?php echo $website->getColorWebsite(); ?>"><?php echo $website->getName(); ?></span><?php endforeach; ?></div><?php endif; ?><?php foreach($this->displayByAlphabet() as $letter=>$customers): ?><div><span class="bigLetter"><?php echo $letter; ?></span><?php $i=0;foreach($customers as $customer): ?><?php if ($this->getDeleteCustomer() || $i < 10): ?><span class="badge <?php echo $this->getDeleteCustomer() ? 'deleted' : '';?>"<?php echo !$this->getDeleteCustomer() ? ' style="background:'.$this->getWebsites()->getColorWebsite($customer->getWebsiteId()).'"' : ''?>><a href="<?php echo Mage::helper("adminhtml")->getUrl('adminhtml/customer/edit', array('id' => $customer->getId())); ?>" title="<?php echo $customer->getCountryId().' - '.$customer->getTelephone(); ?>" target="_blank"><?php echo $customer->lastname?> <?php echo $customer->firstname?></a><a class="delete" onclick="removeCustomer(this); return false;" href="<?php echo Mage::helper("adminhtml")->getUrl('*/*/filter', array('action' => 'removeCustomer', 'id' => $customer->getId())); ?>">x</a></span><?php elseif ($i == 10): ?><span class="badge more"><a title="<?php echo $letter; ?>" href="<?php echo Mage::helper("adminhtml")->getUrl('*/*/filter', array('action' => 'listCustomers', 'letter' => $letter)); ?>" onclick="showPopup(this);return false;"><?php echo Mage::helper('magesms')->__('More...')?></a></span><?php endif; ?><?php $i++; endforeach; ?></div><?php endforeach; ?><?php else: ?><?php echo Mage::helper('magesms')->__('Customers found: 0')?><?php endif; ?></fieldset></div>

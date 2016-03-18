@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+		<magesms translate="title" module="magesms">
+			<title>SMS</title>
+			<sort_order>110</sort_order>
+			<children>
+				<sendsms translate="title" module="magesms">
+					<title>Send SMS</title>
+					<action>adminhtml/magesms_sendsms</action>
+					<sort_order>1</sort_order>
+				</sendsms>
+				<marketing translate="title" module="magesms">
+					<title>Marketing SMS</title>
+					<action>adminhtml/magesms_marketing</action>
+					<sort_order>2</sort_order>
+				</marketing>
+				<history translate="title" module="magesms">
+					<title>SMS History</title>
+					<action>adminhtml/magesms_history</action>
+					<sort_order>3</sort_order>
+				</history>
+				<statistics translate="title" module="magesms">
+					<title>Statistics</title>
+					<action>adminhtml/magesms_statistics</action>
+					<sort_order>4</sort_order>
+				</statistics>
+				<answers translate="title" module="magesms">
+					<title>SMS Answers</title>
+					<action>adminhtml/magesms_answers</action>
+					<sort_order>5</sort_order>
+				</answers>
+				<purchase translate="title" module="magesms">
+					<title>Purchase Credit</title>
+					<action>adminhtml/magesms_purchasecredit</action>
+					<sort_order>9</sort_order>
+				</purchase>
+				<settings>
+					<title>Settings</title>
+					<sort_order>10</sort_order>
+					<children>
+						<smsprofile translate="title" module="magesms">
+							<title>Edit user account</title>
+							<action>adminhtml/magesms_profile</action>
+							<sort_order>0</sort_order>
+						</smsprofile>
+						<adminsms translate="title" module="magesms">
+							<title>Admin SMS</title>
+							<action>adminhtml/magesms_adminsms</action>
+							<sort_order>6</sort_order>
+						</adminsms>
+						<customersms translate="title" module="magesms">
+							<title>Customer SMS</title>
+							<action>adminhtml/magesms_customersms</action>
+							<sort_order>7</sort_order>
+						</customersms>
+						<optout translate="title" module="magesms">
+							<title>SMS opt-out</title>
+							<action>adminhtml/magesms_optout</action>
+							<sort_order>7</sort_order>
+						</optout>
+						<wizard translate="title" module="magesms">
+							<title>SMS Settings</title>
+							<action>adminhtml/magesms_wizard</action>
+							<sort_order>8</sort_order>
+						</wizard>
+					</children>
+				</settings>
+				<about translate="title" module="magesms">
+					<title>About</title>
+					<action>adminhtml/magesms_about</action>
+					<sort_order>11</sort_order>
+				</about>
+			</children>
+		</magesms>
+	</menu>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<magesms>
+						<title>SMS</title>
+						<children>
+							<sendsms translate="title" module="magesms">
+								<title>Send SMS</title>
+							</sendsms>
+							<marketing translate="title" module="magesms">
+								<title>Marketing SMS</title>
+							</marketing>
+							<history translate="title" module="magesms">
+								<title>SMS History</title>
+							</history>
+							<statistics translate="title" module="magesms">
+								<title>Statistics</title>
+							</statistics>
+							<answers translate="title" module="magesms">
+								<title>SMS Answers</title>
+								<children>
+									<mark_as_read translate="title">
+										<title>Mark as read</title>
+									</mark_as_read>
+									<remove translate="title">
+										<title>Remove</title>
+									</remove>
+								</children>
+							</answers>
+							<purchase translate="title" module="magesms">
+								<title>Purchase Credit</title>
+							</purchase>
+							<settings>
+								<title>Settings</title>
+								<children>
+									<smsprofile translate="title" module="magesms">
+										<title>Edit user account</title>
+									</smsprofile>
+									<adminsms translate="title" module="magesms">
+										<title>Admin SMS</title>
+									</adminsms>
+									<customersms translate="title" module="magesms">
+										<title>Customer SMS</title>
+									</customersms>
+									<optout translate="title" module="magesms">
+										<title>SMS opt-out</title>
+									</optout>
+									<wizard translate="title" module="magesms">
+										<title>SMS Settings</title>
+									</wizard>
+								</children>
+							</settings>
+							<about translate="title" module="magesms">
+								<title>About</title>
+							</about>
+						</children>
+					</magesms>
+					<system>
+						<children>
+							<config>
+								<children>
+									<magesms translate="title" module="magesms">
+										<title>Mage SMS</title>
+									</magesms>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

@@ -1,0 +1,12 @@
+<div class="block">
+    <div class="block-title"><strong><span>CONTACT INFORMATION</span></strong></div>
+    <div class="block-content">
+        <ul class="contact-info">
+            <li><i class="icon-location">&nbsp;</i>&nbsp;&nbsp;<p>Rourkela, Odisha, India</p></li>
+            <li><i class="icon-phone">&nbsp;</i>&nbsp;&nbsp;<p>7077 744049</p></li>
+            <li><i class="icon-mail">&nbsp;</i>&nbsp;&nbsp;<p><a href="mailto:info@saydsindia.in">info@saydsindia.in</a></p></li>
+<li><i class="icon-angle-right theme-color"></i><a href="http://saydsindia.in/index.php/terms_condition " title="Terms & Condition">Terms & Condition</a></li>
+<li><i class="icon-angle-right theme-color"></i><a href="http://saydsindia.in/index.php/privacy_policy" title="Privacy Policy">Privacy Policy</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<?php
+/**
+ * Mage SMS - SMS notification & SMS marketing
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the BSD 3-Clause License
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @category    TOPefekt
+ * @package     TOPefekt_Magesms
+ * @copyright   Copyright (c) 2012-2015 TOPefekt s.r.o. (http://www.mage-sms.com)
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ */
+?><?php $user = $this->profile->user; ?><?php $lang = $this->profile->lang; ?><?php $currency = $this->profile->currency; ?><?php $type = Mage::app()->getRequest()->getParam('type'); if (!$type && ($id = Mage::app()->getRequest()->getParam('id'))) { $type = Mage::getModel('magesms/routes')->load($id)->getType(); } ?><?php if (!($lang = Mage::app()->getRequest()->getParam('country0'))) { $lang = $this->profile->lang; } if (Mage::registry('routes')) { $routes = array(Mage::registry('routes')); } else { $routes = array(Mage::getModel('magesms/routes')->load($id)); $lang = $routes[0]->getAreaText(); } ?><h2><?php echo Mage::helper('magesms')->__('SMS Settings'); ?></h2><p><?php echo Mage::helper('magesms')->__('Define SMS Sender Type for each country separately (Text sender ID, Own mobile number or System number). SMS price depends on the recipient country, selected SMS sender type and amount of payment. In countries with undefined SMS sender type will be used System number sender type.'); ?></p><div id="magesms"><div class="entry-edit"><div class="entry-edit-head"><h4 class="icon-head fieldset-legend head-account"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'magesms/AdminTools.gif'; ?>" alt="" /><?php if ($type == 'admin'): ?><?php echo Mage::helper('magesms')->__('Admin SMS settings'); ?><?php else: ?><?php echo Mage::helper('magesms')->__('Customer SMS settings'); ?><?php endif; ?></h4></div><div class="fieldset grid"><form id="magesms_login" action="<?php echo $this->getUrl('*/*/addcountry'.$type) ?>" method="post"><input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" /><div class="margin-form" style="text-align: center"><label for="country"><?php echo Mage::helper('magesms')->__('Select country: '); ?></label><select name="country0" id="country"><?php foreach( Mage::getSingleton('magesms/country_area')->getCollection()->setOrder('country_name', 'ASC') as $country ): ?><option value="<?php echo $country->getCountryName(); ?>" <?php echo $lang == $country->getCountryName() ? 'selected' : ''; ?>><?php echo $country->getCountryName(); ?> (+<?php echo $country->getArea(); ?>)</option><?php endforeach; ?></select><input type="submit" value="<?php echo Mage::helper('magesms')->__('ADD/CHANGE SELECTED COUNTRY'); ?>" class="form-button" /></div></form><form id="magesms_addroute" action="<?php echo $this->getUrl('*/*/addroute') ?>" method="post"><input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" /><?php if ($routes): ?><?php include 'wizard-list.phtml'; ?><?php endif; ?><input type="hidden" name="id" value="<?php echo $id; ?>" /><input type="hidden" name="country0" value="<?php echo $lang; ?>" /><input type="hidden" name="area" value="<?php echo $route->getArea(); ?>" /><input type="hidden" name="type" value="<?php echo $type; ?>" /><input type="button" onclick="addrouteForm.submit();" value="<?php echo Mage::helper('magesms')->__('SAVE SMS SETTINGS'); ?>" class="form-button" /></form><script type="text/javascript">//<![CDATA[
+var addrouteForm = new varienForm('magesms_addroute', '<?php echo Mage::helper("adminhtml")->getUrl('*/*/validate') ?>');
+//]]></script></div></div></div>

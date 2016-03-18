@@ -1,0 +1,16 @@
+<?php
+/**
+ * Mage SMS - SMS notification & SMS marketing
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the BSD 3-Clause License
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @category    TOPefekt
+ * @package     TOPefekt_Magesms
+ * @copyright   Copyright (c) 2012-2015 TOPefekt s.r.o. (http://www.mage-sms.com)
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ */
+?><div class="fieldset"><form method="post" id="magesms_filter_template" onsubmit="window.submitSaveFilter($('magesms_filter_template')); return false;" action="<?php echo Mage::helper("adminhtml")->getUrl('*/*/filter', array('action' => 'saveFilter')); ?>"><div class="margin-form"><label for="name"><?php echo Mage::helper('magesms')->__('Filter Name'); ?>: </label><input class="input-text" type="text" name="saveName" id="saveName" value="" /><button type="button" onclick="window.submitSaveFilter($('magesms_filter_template'));" title="<?php echo Mage::helper('magesms')->__('Save filter'); ?>" name="submitSaveFilter" class="form-button" /><span><span><span><?php echo Mage::helper('magesms')->__('Save filter'); ?></span></span></span></button></div></form></div>

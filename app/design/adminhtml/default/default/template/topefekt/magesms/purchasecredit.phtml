@@ -1,0 +1,16 @@
+<?php
+/**
+ * Mage SMS - SMS notification & SMS marketing
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the BSD 3-Clause License
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @category    TOPefekt
+ * @package     TOPefekt_Magesms
+ * @copyright   Copyright (c) 2012-2015 TOPefekt s.r.o. (http://www.mage-sms.com)
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ */
+?><?php $user = $this->profile->user; ?><?php $url = 'pay.topefekt.com/pay.php?user='.$user->getUser().'&passwd='.$user->getPasswd().'&country='.$user->getCountry0(); ?><?php if (Mage::getModel('magesms/country')->getCollection()->addFieldToFilter('name', $user->getCountry0())->getFirstItem()->getVat()): ?><?php $url .= '&vat=0'; ?><?php else: ?><?php $url .= '&vat=1'; ?><?php endif; ?><h2><?php echo Mage::helper('magesms')->__('Purchase Credit'); ?></h2><p><?php echo Mage::helper('magesms')->__(' In case methods for credit purchase are not displayed properly, please click here:'); ?><a href="http://<?php echo $url; ?>" target="_blank"><?php echo Mage::helper('magesms')->__('Purchase Credit'); ?></a></p><br /><iframe frameborder="no" style="margin:0px;padding:0px;width:100%;height:400px" src="https://<?php echo $url.'&parentUrl='.Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>"></iframe>
